@@ -6,59 +6,106 @@
 
 
     <style>
+      .center {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: auto;
+      margin-top: auto;
+      width: 80%;
+      height: 80%;
+      }
 
-  
-        .center {
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-        margin-bottom: auto;
-        margin-top: auto;
-        width: 80%;
-        height: 80%;
-        
-  }
       .logo {
-            display: block;
-            margin-left: auto;
-            margin-right: auto;
-            margin-bottom: auto;
-            margin-top: auto;
-            width: 10%;
-            height: 10%;
-            
-  }
+            width: 8%;
+            height: 8%;
+            margin: 2% 10% 2% 10%;
+      }
 
 
-  h1,h2,h3,H4,p{
-      
-      font-family: 'Electrolize', sans-serif;
-      
-      margin: 2.5% 10% 2.5% 10%;
-      
-      /* text-align: center; */
+      h1,h2,h3,H4,p{
+          
+          font-family: 'Electrolize', sans-serif;
+          
+          margin: 2.5% 10% 2.5% 10%;
+          
+          /* text-align: center; */
+      }
 
 
-  }
-        
+      /* Solid border */
+      hr.solid {
+        border-top: 1.5px solid rgb(0, 0, 0); 
+      }
+
+      /* hr.dim_solid {
+        border-top: 1.5px solid rgb(0, 0, 0);
+        margin: 2.5% 10% 2.5% 10%;  
+      } */
+
+      #more {display: none; 
+      }
+
+      #myBtn {display: block; 
+      margin: 2.5% 10% 2.5% 10%; 
+      }
+
+
     </style>
+
+    <script>
+    function myFunction() {
+        var dots = document.getElementById("dots");
+        var moreText = document.getElementById("more");
+        var btnText = document.getElementById("myBtn");
+
+        if (dots.style.display === "none") {
+          dots.style.display = "inline";
+          btnText.innerHTML = "Read more";
+          moreText.style.display = "none";
+        } else {
+          dots.style.display = "none";
+          btnText.innerHTML = "Read less";
+          moreText.style.display = "inline";
+      }
+}
+
+    </script>
+    
   </head>
+
+
+
+
 <body>
 
     <!-- <h1 align="center">PROJECT: SALM [ EXPERIMENTARIUM ] </h1>  -->
-    <h1>PROJECT: SALM [ EXPERIMENTARIUM ] </h1> 
+    <img src="logo.png"  class="logo">
+    <h1>SALM [ EXPERIMENTARIUM ] </h1> 
+
+    <!-- <hr class="dim_solid"> -->
+
     <h2>ASSEMBLY SEQUENCE</h2>
-    <img src="Assembly_sequence.gif"  class="center"><br><br><br>
+    <img src="Assembly_sequence.gif"  class="center">
+    <br>
+
+    <hr class="solid">
+
     <h2>MILLING PROCESS</h2>
-    <img src="process.jpg"  class="center"><br><br><br>
+    <img src="process.jpg"  class="center">
+    <br>
+
+    <hr class="solid">
+    
     <h2>FABRICATION PASSPORT</h2>
     <p><strong>Base Material: Walnut</strong> 
       <br> 
       <strong>Robot Feed_Rate: 14mm/s</strong>  
-      
     </p> 
-    <br>
+    
+    <p>hwgfiwvbif<span id="dots">...</span><span id="more">, gfgf</span></p>
 
-    <img src="logo.png"  class="logo">
+    <button onclick="myFunction()" id="myBtn">Read more</button>
+
 
 </body> 
